@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -11,6 +11,47 @@
   <link rel="stylesheet" href="temaescuro.css">
   <script src="scripts/header.js" defer></script>
   <title>InfoSports</title>
+  <style>
+    /* Estilos específicos para a tabela de IMC */
+    .imc-container {
+      margin: 20px 0;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -78,9 +119,78 @@
           </div>
         </a>
 
+        <!-- Tabela de IMC -->
+        <div class="imc-container">
+          <h2>Calculadora de IMC</h2>
+          <form id="imcForm">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" required>
+
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" step="0.01" required>
+
+            <button type="submit">Calcular IMC</button>
+          </form>
+
+          <h3>Resultados do IMC</h3>
+          <table id="resultadoTabela">
+            <thead>
+              <tr>
+                <th>Peso (kg)</th>
+                <th>Altura (m)</th>
+                <th>IMC</th>
+                <th>Classificação</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaCorpo">
+              <!-- Os resultados serão inseridos aqui -->
+            </tbody>
+          </table>
+        </div>
+
       </div>
     </section>
   </div>
+
+  <script>
+    document.getElementById('imcForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio do formulário
+
+      const peso = parseFloat(document.getElementById('peso').value);
+      const altura = parseFloat(document.getElementById('altura').value);
+
+      if (peso > 0 && altura > 0) {
+        const imc = peso / (altura * altura);
+        let classificacao = '';
+
+        if (imc < 18.5) {
+          classificacao = 'Abaixo do peso';
+        } else if (imc < 24.9) {
+          classificacao = 'Peso normal';
+        } else if (imc < 29.9) {
+          classificacao = 'Sobrepeso';
+        } else {
+          classificacao = 'Obesidade';
+        }
+
+        // Adiciona o resultado à tabela
+        const tabelaCorpo = document.getElementById('tabelaCorpo');
+        const novaLinha = tabelaCorpo.insertRow();
+
+        const celulaPeso = novaLinha.insertCell(0);
+        const celulaAltura = novaLinha.insertCell(1);
+        const celulaIMC = novaLinha.insertCell(2);
+        const celulaClassificacao = novaLinha.insertCell(3);
+
+        celulaPeso.innerText = peso;
+        celulaAltura.innerText = altura;
+        celulaIMC.innerText = imc.toFixed(2);
+        celulaClassificacao.innerText = classificacao;
+      } else {
+        alert('Por favor, insira valores válidos.');
+      }
+    });
+  </script>
 </body>
 
 </html>
