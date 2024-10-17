@@ -62,9 +62,14 @@
     }
 
     .back-to-top {
-      display: block;
-      margin: 20px auto;
-      text-align: center;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -88,7 +93,7 @@
 
         <a class="pag-link" href="boxe.html">
           <div class="categoryCard">
-            <img src="https://imagens.ebc.com.br/NYcD4N0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/bia_ferreira_mundial_dia_1.jpg?itok=EyIc3F5A" alt="Boxe">
+            <img src="https://imagens.ebc.com.br/=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/bia_ferreira_mundial_dia_1.jpg?itok=EyIc3F5A" alt="Boxe">
             <p class="mainCategoryCardTitle">BOXE</p>
             <p class="mainCategoryCardDescription">Descubra a força interior e a técnica impecável necessárias para se destacar no ringue. Desafie-se a superar seus limites físicos e mentais enquanto aprende os segredos deste esporte de combate emocionante.</p>
           </div>
@@ -163,13 +168,12 @@
           </table>
         </div>
 
-        <a class="back-to-top" href="#backToTop">Voltar ao Topo</a>
-
       </div>
     </section>
 
     <footer class="footer">
       <p>&copy; 2024 InfoSports. Todos os direitos reservados.</p>
+      <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Voltar ao Topo</button>
     </footer>
   </div>
 
@@ -198,7 +202,4 @@
         const tabelaCorpo = document.getElementById('tabelaCorpo');
         const novaLinha = tabelaCorpo.insertRow();
 
-        const celulaPeso = novaLinha.insertCell(0);
-        const celulaAltura = novaLinha.insertCell(1);
-        const celulaIMC = novaLinha.insertCell(2);
-        const celulaClassificacao = nova
+        const celula
