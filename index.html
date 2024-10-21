@@ -5,219 +5,66 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="temaescuro.css">
-  <script src="scripts/header.js" defer></script>
   <title>InfoSports</title>
   <style>
-    /* Estilos específicos para a tabela de IMC */
-    .imc-container {
-      margin: 20px 0;
-      padding: 20px;
-      background: #f4f4f4;
-      border-radius: 5px;
-      border: 2px solid #007BFF;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th,
-    td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #007BFF;
-      color: white;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .footer {
-      border-top: 2px solid #007BFF;
-      padding: 10px 0;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .back-to-top {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+    body { font-family: Arial, sans-serif; }
+    .header { padding: 20px; background-color: #007BFF; color: white; text-align: center; }
+    .imc-container { margin: 20px; padding: 20px; background: #f4f4f4; border-radius: 5px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+    th { background-color: #007BFF; color: white; }
+    input { width: 100%; padding: 10px; margin-bottom: 10px; }
+    button { width: 100%; padding: 10px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .footer { border-top: 2px solid #007BFF; padding: 10px 0; text-align: center; margin-top: 20px; }
+    .back-to-top { margin-top: 10px; padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <header class="header">
-      <a class="logo" href="index.html">InfoSports</a>
-      <div class="headerBtnGroup">
-        <button class="navBtn"><a href="login.html">Login</a></button>
-        <button class="navBtn"><a href="registro.html">Registro</a></button>
-        <button class="navBtn"><a href="contato.html">Contato</a></button>
-      </div>
-    </header>
+  <header class="header">
+    <h1>InfoSports</h1>
+    <nav>
+      <button><a href="login.html" style="color: white; text-decoration: none;">Login</a></button>
+      <button><a href="registro.html" style="color: white; text-decoration: none;">Registro</a></button>
+      <button><a href="contato.html" style="color: white; text-decoration: none;">Contato</a></button>
+    </nav>
+  </header>
 
-    <p class="sectionTitle" id="backToTop">BEM VINDO A INFOSPORTS!</p>
-    <p class="sectionDescription">Aqui é onde você encontra todos os itens mais novos e modernos do seu esporte preferido.</p>
+  <p class="sectionTitle">BEM VINDO A INFOSPORTS!</p>
+  <p>Aqui é onde você encontra todos os itens mais novos e modernos do seu esporte preferido.</p>
 
-    <section class="gridContainer">
-      <div class="mainContent">
-        <a class="pag-link" href="boxe.html">
-          <div class="categoryCard">
-            <img src="https://imagens.ebc.com.br/NYcD4y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/bia_ferreira_mundial_dia_1.jpg?itok=EyIc3F5A" alt="Boxe">
-            <p class="mainCategoryCardTitle">BOXE</p>
-            <p class="mainCategoryCardDescription">Descubra a força interior e a técnica impecável necessárias para se destacar no ringue.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="basquete.html">
-          <div class="categoryCard">
-            <img src="https://s1.static.brasilescola.uhol.com.br/be/2022/08/basquete.jpg" alt="Basquete">
-            <p class="mainCategoryCardTitle">BASQUETE</p>
-            <p class="mainCategoryCardDescription">O basquetebol é um esporte coletivo praticado entre duas equipes.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="corrida.html">
-          <div class="categoryCard">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1K-FfsVALgAXGtG7zQTmFsCocR_g6PKZRQ&s" alt="Corrida">
-            <p class="mainCategoryCardTitle">CORRIDA</p>
-            <p class="mainCategoryCardDescription">A corrida é uma prática corporal que envolve os músculos dos membros inferiores.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="beisebol.html">
-          <div class="categoryCard">
-            <img src="https://static.todamahteria.com.br/upload/be/is/beisebol-og.jpg" alt="Beisebol">
-            <p class="mainCategoryCardTitle">BEISEBOL</p>
-            <p class="mainCategoryCardDescription">O beisebol é um esporte praticado por duas equipes de nove jogadores.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="futebolamericano.html">
-          <div class="categoryCard">
-            <img src="https://images.vexels.com/mehdia/users/3/229528/isolated/preview/43929ffbdf2c80fcbe27eb145922e394-ilustracao-do-lado-da-bola-de-futebol-americano.png" alt="Futebol Americano">
-            <p class="mainCategoryCardTitle">FUTEBOL AMERICANO</p>
-            <p class="mainCategoryCardDescription">O objetivo é levar a bola até o campo adversário, marcando um touchdown.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="volei.html">
-          <div class="categoryCard">
-            <img src="https://via.placeholder.com/150" alt="Vôlei">
-            <p class="mainCategoryCardTitle">VÔLEI</p>
-            <p class="mainCategoryCardDescription">O vôlei é um esporte coletivo que envolve duas equipes.</p>
-          </div>
-        </a>
-
-        <!-- Tabela de IMC -->
-        <div class="imc-container">
-          <h2>Calculadora de IMC</h2>
-          <form id="imcForm">
-            <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" required>
-
-            <label for="altura">Altura (m):</label>
-            <input type="number" id="altura" step="0.01" required>
-
-            <button type="submit">Calcular IMC</button>
-          </form>
-
-          <h3>Resultados do IMC</h3>
-          <table id="resultadoTabela">
-            <thead>
-              <tr>
-                <th>Peso (kg)</th>
-                <th>Altura (m)</th>
-                <th>IMC</th>
-                <th>Classificação</th>
-              </tr>
-            </thead>
-            <tbody id="tabelaCorpo">
-              <!-- Os resultados serão inseridos aqui -->
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>&copy; 2024 InfoSports. Todos os direitos reservados.</p>
-      <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Voltar ao Topo</button>
-    </footer>
+  <div class="imc-container">
+    <h2>Calculadora de IMC</h2>
+    <form id="imcForm">
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" required>
+      <label for="altura">Altura (m):</label>
+      <input type="number" id="altura" step="0.01" required>
+      <button type="submit">Calcular IMC</button>
+    </form>
+    <h3>Resultados do IMC</h3>
+    <table>
+      <thead>
+        <tr><th>Peso (kg)</th><th>Altura (m)</th><th>IMC</th><th>Classificação</th></tr>
+      </thead>
+      <tbody id="tabelaCorpo"></tbody>
+    </table>
   </div>
 
-  <script>
-    document.getElementById('imcForm').addEventListener('submit', function (event) {
-      event.preventDefault(); // Impede o envio do formulário
+  <footer class="footer">
+    <p>&copy; 2024 InfoSports. Todos os direitos reservados.</p>
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Voltar ao Topo</button>
+  </footer>
 
+  <script>
+    document.getElementById('imcForm').addEventListener('submit', function (e) {
+      e.preventDefault();
       const peso = parseFloat(document.getElementById('peso').value);
       const altura = parseFloat(document.getElementById('altura').value);
-
-      if (peso > 0 && altura > 0) {
-        const imc = peso / (altura * altura);
-        let classificacao = '';
-
-        if (imc < 18.5) {
-          classificacao = 'Abaixo do peso';
-        } else if (imc < 24.9) {
-          classificacao = 'Peso normal';
-        } else if (imc < 29.9) {
-          classificacao = 'Sobrepeso';
-        } else {
-          classificacao = 'Obesidade';
-        }
-
-        // Adiciona o resultado à tabela
-        const tabelaCorpo = document.getElementById('tabelaCorpo');
-        const novaLinha = tabelaCorpo.insertRow();
-
-        const celPeso = novaLinha.insertCell(0);
-        const celAltura = novaLinha.insertCell(1);
-        const celIMC = novaLinha.insertCell(2);
-        const celClassificacao = novaLinha.insertCell(3);
-
-        celPeso.textContent = peso.toFixed(2);
-        celAltura.textContent = altura.toFixed(2);
-        celIMC.textContent = imc.toFixed(2);
-        celClassificacao.textContent = classificacao;
-
-        // Limpa os campos após o cálculo
-        document.getElementById('peso').value = '';
-        document.getElementById('altura').value = '';
-      } else {
-        alert('Por favor, insira valores válidos para peso e altura.');
-      }
+      const imc = (peso / (altura * altura)).toFixed(2);
+      let classificacao = imc < 18.5 ? 'Abaixo do peso' : imc < 24.9 ? 'Peso normal' : imc < 29.9 ? 'Sobrepeso' : 'Obesidade';
+      document.getElementById('tabelaCorpo').innerHTML += `<tr><td>${peso.toFixed(2)}</td><td>${altura.toFixed(2)}</td><td>${imc}</td><td>${classificacao}</td></tr>`;
+      document.getElementById('imcForm').reset();
     });
   </script>
 </body>
