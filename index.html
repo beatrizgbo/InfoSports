@@ -18,7 +18,7 @@
       padding: 20px;
       background: #f4f4f4;
       border-radius: 5px;
-      border: 2px solid #007BFF; /* Borda azul */
+      border: 2px solid #007BFF;
     }
 
     table {
@@ -56,7 +56,7 @@
     }
 
     .footer {
-      border-top: 2px solid #007BFF; /* Borda azul no rodapé */
+      border-top: 2px solid #007BFF;
       padding: 10px 0;
       text-align: center;
       margin-top: 20px;
@@ -91,54 +91,7 @@
 
     <section class="gridContainer">
       <div class="mainContent">
-
-        <a class="pag-link" href="boxe.html">
-          <div class="categoryCard">
-            <img src="https://imagens.ebc.com.br/NYcD4y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/bia_ferreira_mundial_dia_1.jpg?itok=EyIc3F5A" alt="Boxe">
-            <p class="mainCategoryCardTitle">BOXE</p>
-            <p class="mainCategoryCardDescription">Descubra a força interior e a técnica impecável necessárias para se destacar no ringue. Desafie-se a superar seus limites físicos e mentais enquanto aprende os segredos deste esporte de combate emocionante.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="basquete.html">
-          <div class="categoryCard">
-            <img src="https://s1.static.brasilescola.uhol.com.br/be/2022/08/basquete.jpg" alt="Basquete">
-            <p class="mainCategoryCardTitle">BASQUETE</p>
-            <p class="mainCategoryCardDescription">O basquetebol é um esporte coletivo de invasão praticado entre duas equipes. O objetivo é colocar a bola no cesto fixado nas extremidades da quadra.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="corrida.html">
-          <div class="categoryCard">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1K-FfsVALgAXGtG7zQTmFsCocR_g6PKZRQ&s" alt="Corrida">
-            <p class="mainCategoryCardTitle">CORRIDA</p>
-            <p class="mainCategoryCardDescription">A corrida é uma prática corporal que envolve os músculos dos membros inferiores para promover o deslocamento do corpo.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="beisebol.html">
-          <div class="categoryCard">
-            <img src="https://static.todamahteria.com.br/upload/be/is/beisebol-og.jpg" alt="Beisebol">
-            <p class="mainCategoryCardTitle">BEISEBOL</p>
-            <p class="mainCategoryCardDescription">Basebol ou beisebol (do inglês baseball) é um esporte praticado por duas equipes de nove jogadores, que alternadamente ocupam as posições de ataque e defesa.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="futebolamericano.html">
-          <div class="categoryCard">
-            <img src="https://images.vexels.com/mehdia/users/3/229528/isolated/preview/43929ffbdf2c80fcbe27eb145922e394-ilustracao-do-lado-da-bola-de-futebol-americano.png" alt="Futebol Americano">
-            <p class="mainCategoryCardTitle">FUTEBOL AMERICANO</p>
-            <p class="mainCategoryCardDescription">O futebol americano é um esporte de invasão, cujo objetivo é levar a bola até o campo adversário, marcando um touchdown.</p>
-          </div>
-        </a>
-
-        <a class="pag-link" href="volei.html">
-          <div class="categoryCard">
-            <img src="https://via.placeholder.com/150" alt="Vôlei">
-            <p class="mainCategoryCardTitle">VÔLEI</p>
-            <p class="mainCategoryCardDescription">O vôlei é um esporte coletivo que envolve duas equipes, cujo objetivo é passar a bola por cima da rede e fazer pontos no lado adversário.</p>
-          </div>
-        </a>
+        <!-- Outros links de categoria aqui -->
 
         <!-- Tabela de IMC -->
         <div class="imc-container">
@@ -203,5 +156,26 @@
         const tabelaCorpo = document.getElementById('tabelaCorpo');
         const novaLinha = tabelaCorpo.insertRow();
 
-        const cel
+        const celPeso = novaLinha.insertCell(0);
+        const celAltura = novaLinha.insertCell(1);
+        const celIMC = novaLinha.insertCell(2);
+        const celClassificacao = novaLinha.insertCell(3);
+
+        celPeso.textContent = peso.toFixed(2);
+        celAltura.textContent = altura.toFixed(2);
+        celIMC.textContent = imc.toFixed(2);
+        celClassificacao.textContent = classificacao;
+
+        // Limpa os campos após o cálculo
+        document.getElementById('peso').value = '';
+        document.getElementById('altura').value = '';
+      } else {
+        alert('Por favor, insira valores válidos para peso e altura.');
+      }
+    });
+  </script>
+</body>
+
+</html>
+
 
