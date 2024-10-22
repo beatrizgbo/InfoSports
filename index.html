@@ -5,12 +5,182 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/temaescuro.css">
   <script src="scripts/header.js" defer></script>
   <title>InfoSports</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(221, 228, 245);
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      padding: 70px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .headerBtnGroup {
+      display: flex;
+      align-items: center;
+    }
+
+    .navBtn {
+      margin-left: 15px;
+    }
+
+    .navBtn a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 15px;
+    }
+
+    .sectionTitle {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 28px;
+    }
+
+    .sectionDescription {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .main {
+      padding-bottom: 100px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .categoryCard {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+      flex: 0 0 30%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .categoryCard:hover {
+      transform: scale(1.05);
+    }
+
+    .categoryCard img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .sidebar {
+      flex: 0 0 25%;
+      margin-left: 20px;
+    }
+
+    .sidebarContent {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .IMC p {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      box-shadow: 2px 2px 2px rgb(196, 196, 196);
+      border: none;
+      border-radius: 5px;
+      background-color: #bed4f9;
+    }
+
+    .btnCalcular {
+      background-color: #5167b2;
+      width: 72%;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      font-size: 20px;
+    }
+
+    .btnCalcular:hover {
+      background-color: #86a0cc;
+    }
+
+    @media(max-width: 650px) {
+      .categoryCard {
+        flex: 0 0 45%;
+      }
+
+      .sidebar {
+        display: none;
+      }
+    }
+
+    @media(max-width: 400px) {
+      .categoryCard {
+        flex: 0 0 100%;
+      }
+    }
+
+    .footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footerAnchor {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footerAnchor:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
@@ -21,9 +191,6 @@
         <button class="navBtn"><a href='/login'>Login</a></button>
         <button class="navBtn"><a href='/registro'>Registro</a></button>
         <button class="navBtn"><a href='/contato'>Contato</a></button>
-        <div>
-          <input type="checkbox" class="check" id="chk"/>
-        </div>
       </div>
       <div class="hamburguer-menu">
         <div class="line"></div>
@@ -77,7 +244,6 @@
             <p class="mainCategoryCardDescription">O vôlei é um esporte coletivo que envolve duas equipes.</p>
           </div>
         </a>
-
       </div>
       <aside class="sidebar">
         <div class="sidebarContent">
@@ -85,21 +251,4 @@
             <p>INDICE DE MASSA CORPORAL (IMC)</p>
             <label for="#peso">Peso (KG)</label>
             <input id="peso" type="text" placeholder="Digite o peso...">
-            <label for="#altura">Altura (M)</label>
-            <input id="altura" type="text" placeholder="Digite a altura...">
-            <button class="btnCalcular">Calcular</button>
-      </aside>
-
-    </section>
-
-    <footer class="footer">
-      <span>Info Sports</span>
-      <a href="#backToTop" class="footerAnchor">VOLTAR PARA O TOPO</a>
-    </footer>
-  </div>
-  <script src="scripts/imc.js"></script>
-  <script src="scripts/temaescuro.js"></script>
-  <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-</body>
-
-</html> 
+            <label
