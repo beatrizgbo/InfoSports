@@ -1,63 +1,226 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-
+/* css/index.css */
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: rgb(221, 228, 245);
-    margin: 0;
+  background-color: rgb(221, 228, 245);
+  font-family: Arial, sans-serif;
+}
+
+section {
+  padding: 70px;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.content {
-    padding: 20px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.headerBtnGroup {
+  display: flex;
+  align-items: center;
+}
+
+.navBtn {
+  margin-left: 15px;
+}
+
+.navBtn a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
 }
 
 .sectionTitle {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 28px;
 }
 
 .sectionDescription {
-    font-size: 1rem;
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.main {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  gap: 30px;
+}
+
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 1px solid #6679bd;
+  padding: 40px;
+  height: 500px;
+}
+
+.name,
+.email,
+.telefone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 72%;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  box-shadow: 2px 2px 2px rgb(196, 196, 196);
+  border: none;
+  border-radius: 5px;
+  background-color: #bed4f9;
+}
+
+.btn-concluir {
+  background-color: #5167b2;
+  width: 72%;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.btn-concluir:hover {
+  background-color: #86a0cc;
+}
+
+input[type="text"],
+input[type="telefone"],
+input[type="email"],
+input::placeholder {
+  font-size: large;
+  padding: 8px;
 }
 
 .gridContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.categoryCard{
-    width: calc(100% - 20px);
-    /* Ajuste a largura dos cards conforme necessário */
-    margin: 10px;
-    padding: 20px;
-    background-color: lightgrey;
-    border: 5px solid #5167b2;
-    text-align: center;
-    box-sizing: border-box;
+.categoryCard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  flex: 0 0 30%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-.mainCardImg {
-    width: 100%;
-    height: auto;
+.categoryCard:hover {
+  transform: scale(1.05);
 }
 
-.mainCategoryCardTitle {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.categoryCard img {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
-.mainCategoryCardDescription {
-    font-size: 1rem;
+.sidebar {
+  flex: 0 0 25%;
+  margin-left: 20px;
+}
+
+.sidebarContent {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.IMC p {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+@media(max-width: 650px) {
+  .box-content {
+    width: 400px;
+  }
+
+  form {
+    width: 300px;
+  }
+
+  input {
+    width: 200px;
+  }
+}
+
+@media(max-width: 400px) {
+  .box-content {
+    width: 400px;
+  }
+
+  form {
+    width: 220px;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.footerAnchor {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerAnchor:hover {
+  text-decoration: underline;
 }
