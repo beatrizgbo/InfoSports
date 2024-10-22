@@ -1,159 +1,226 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* css/index.css */
 * {
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(221, 228, 245);
+  font-family: Arial, sans-serif;
+}
+
+section {
+  padding: 70px;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.headerBtnGroup {
+  display: flex;
+  align-items: center;
+}
+
+.navBtn {
+  margin-left: 15px;
+}
+
+.navBtn a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
 }
 
 .sectionTitle {
-    font-size: 26px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding-top: 20px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 28px;
 }
 
 .sectionDescription {
-    text-align: center;
-    color: #383838;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
-.gridContainer {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "mainContent sidebarContent";
-    padding: 20px;
-    flex: 1 0 auto;
-    padding-bottom: 80px;
+.main {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.mainContent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    column-gap: 50px;
-    grid-area: mainContent;
+.box-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  gap: 30px;
 }
 
-.categoryCard {
-    width: 280px;
-    height: 430px;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    transition: 0.5s;
-    cursor: pointer;
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: 1px solid #6679bd;
+  padding: 40px;
+  height: 500px;
 }
 
-.mainCardImg {
-    width: 100%;
-    height: 180px;
-    border-radius: 10px;
-}
-
-.categoryCard:hover {
-    border-color: #86a0cc;
-}
-
-.pag-link {
-    text-decoration: none;
-    color: #292929;
-}
-
-.mainCategoryCardTitle {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 6px;
-}
-
-.mainCategoryCardDescription {
-    padding: 6px;
-}
-
-
-}
-
-.IMC {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    padding-bottom: 20px;
-    background-color: #d5d9e7;
-    flex-wrap: wrap;
-}
-
-.sidebarCard {
-    width: 75%;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.sidebarCardImg {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.sidebarCardTitle {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 10px;
-}
-
-.sidebarCard:hover {
-    border-color: gainsboro;
-}
-
-
-.btnCalcular {
-    background-color: #5167b2;
-    width: 72%;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    font-size: 20px;
-}
-
-.btnCalcular:hover {
-    background-color: #86a0cc;
+.name,
+.email,
+.telefone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 72%;
+  align-items: center;
 }
 
 input {
-    width: 100%;
-    height: 40px;
-    box-shadow: 2px 2px 2px rgb(196, 196, 196);
-    border: none;
-    border-radius: 5px;
-    background-color: #bed4f9;
-    padding: 6px;
+  width: 100%;
+  height: 40px;
+  box-shadow: 2px 2px 2px rgb(196, 196, 196);
+  border: none;
+  border-radius: 5px;
+  background-color: #bed4f9;
 }
 
-@media (max-width: 630px) {
-    .gridContainer {
-        grid-template-areas:
-            "mainContent"
-            "sidebarContent";
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .footerAnchor {
-        font-size: 19px;
-    }
+.btn-concluir {
+  background-color: #5167b2;
+  width: 72%;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 20px;
 }
 
-@media (max-width: 370px) {
-    .sidebarContent {
-        padding: 1px;
-    }
+.btn-concluir:hover {
+  background-color: #86a0cc;
+}
+
+input[type="text"],
+input[type="telefone"],
+input[type="email"],
+input::placeholder {
+  font-size: large;
+  padding: 8px;
+}
+
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.categoryCard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  flex: 0 0 30%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.categoryCard:hover {
+  transform: scale(1.05);
+}
+
+.categoryCard img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.sidebar {
+  flex: 0 0 25%;
+  margin-left: 20px;
+}
+
+.sidebarContent {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.IMC p {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+@media(max-width: 650px) {
+  .box-content {
+    width: 400px;
+  }
+
+  form {
+    width: 300px;
+  }
+
+  input {
+    width: 200px;
+  }
+}
+
+@media(max-width: 400px) {
+  .box-content {
+    width: 400px;
+  }
+
+  form {
+    width: 220px;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.footerAnchor {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerAnchor:hover {
+  text-decoration: underline;
 }
