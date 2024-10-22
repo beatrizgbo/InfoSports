@@ -1,3 +1,4 @@
+/* css/index.css */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
 
 body {
   background-color: rgb(221, 228, 245);
+  font-family: Arial, sans-serif;
 }
 
 section {
@@ -19,6 +21,48 @@ section {
   gap: 30px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.headerBtnGroup {
+  display: flex;
+  align-items: center;
+}
+
+.navBtn {
+  margin-left: 15px;
+}
+
+.navBtn a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 28px;
+}
+
+.sectionDescription {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
 .main {
   padding-bottom: 100px;
   display: flex;
@@ -26,32 +70,26 @@ section {
   flex-wrap: wrap;
 }
 
-
 .box-content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #ffff;
+  background-color: #fff;
   width: 100%;
   height: 600px;
   border-radius: 8px;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 form {
   width: 40%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: center;
-  flex-wrap: wrap;
   border-radius: 25px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #6679bd;
+  border: 1px solid #6679bd;
   padding: 40px;
   height: 500px;
 }
@@ -74,7 +112,6 @@ input {
   border-radius: 5px;
   background-color: #bed4f9;
 }
-
 
 .btn-concluir {
   background-color: #5167b2;
@@ -99,6 +136,55 @@ input::placeholder {
   padding: 8px;
 }
 
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.categoryCard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  flex: 0 0 30%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.categoryCard:hover {
+  transform: scale(1.05);
+}
+
+.categoryCard img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.sidebar {
+  flex: 0 0 25%;
+  margin-left: 20px;
+}
+
+.sidebarContent {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.IMC p {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
 @media(max-width: 650px) {
   .box-content {
     width: 400px;
@@ -113,8 +199,6 @@ input::placeholder {
   }
 }
 
-
-
 @media(max-width: 400px) {
   .box-content {
     width: 400px;
@@ -123,6 +207,20 @@ input::placeholder {
   form {
     width: 220px;
   }
+}
 
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #333;
+  color: #fff;
+}
 
+.footerAnchor {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerAnchor:hover {
+  text-decoration: underline;
 }
