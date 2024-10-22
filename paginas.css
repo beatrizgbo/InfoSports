@@ -1,226 +1,254 @@
-/* css/index.css */
-* {
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
 
-body {
-  background-color: rgb(221, 228, 245);
-  font-family: Arial, sans-serif;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/temaescuro.css">
+  <script src="scripts/header.js" defer></script>
+  <title>InfoSports</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-section {
-  padding: 70px;
-  display: flex;
-  justify-content: center;
-}
+    body {
+      background-color: rgb(221, 228, 245);
+      font-family: Arial, sans-serif;
+    }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+    section {
+      padding: 70px;
+      display: flex;
+      justify-content: center;
+    }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
 
-.logo {
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
-}
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
 
-.headerBtnGroup {
-  display: flex;
-  align-items: center;
-}
+    .logo {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
 
-.navBtn {
-  margin-left: 15px;
-}
+    .headerBtnGroup {
+      display: flex;
+      align-items: center;
+    }
 
-.navBtn a {
-  text-decoration: none;
-  color: #fff;
-  padding: 10px 15px;
-}
+    .navBtn {
+      margin-left: 15px;
+    }
 
-.sectionTitle {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 28px;
-}
+    .navBtn a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 15px;
+    }
 
-.sectionDescription {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
+    .sectionTitle {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 28px;
+    }
 
-.main {
-  padding-bottom: 100px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    .sectionDescription {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
 
-.box-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #fff;
-  width: 100%;
-  height: 600px;
-  border-radius: 8px;
-  gap: 30px;
-}
+    .main {
+      padding-bottom: 100px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-form {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25px;
-  border: 1px solid #6679bd;
-  padding: 40px;
-  height: 500px;
-}
+    .categoryCard {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+      flex: 0 0 30%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
 
-.name,
-.email,
-.telefone {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 72%;
-  align-items: center;
-}
+    .categoryCard:hover {
+      transform: scale(1.05);
+    }
 
-input {
-  width: 100%;
-  height: 40px;
-  box-shadow: 2px 2px 2px rgb(196, 196, 196);
-  border: none;
-  border-radius: 5px;
-  background-color: #bed4f9;
-}
+    .categoryCard img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
 
-.btn-concluir {
-  background-color: #5167b2;
-  width: 72%;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: none;
-  color: white;
-  font-size: 20px;
-}
+    .sidebar {
+      flex: 0 0 25%;
+      margin-left: 20px;
+    }
 
-.btn-concluir:hover {
-  background-color: #86a0cc;
-}
+    .sidebarContent {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-input[type="text"],
-input[type="telefone"],
-input[type="email"],
-input::placeholder {
-  font-size: large;
-  padding: 8px;
-}
+    .IMC p {
+      font-weight: bold;
+    }
 
-.gridContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
 
-.categoryCard {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  text-align: center;
-  flex: 0 0 30%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
+    input {
+      width: 100%;
+      height: 40px;
+      box-shadow: 2px 2px 2px rgb(196, 196, 196);
+      border: none;
+      border-radius: 5px;
+      background-color: #bed4f9;
+    }
 
-.categoryCard:hover {
-  transform: scale(1.05);
-}
+    .btnCalcular {
+      background-color: #5167b2;
+      width: 72%;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      font-size: 20px;
+    }
 
-.categoryCard img {
-  max-width: 100%;
-  border-radius: 5px;
-}
+    .btnCalcular:hover {
+      background-color: #86a0cc;
+    }
 
-.sidebar {
-  flex: 0 0 25%;
-  margin-left: 20px;
-}
+    @media(max-width: 650px) {
+      .categoryCard {
+        flex: 0 0 45%;
+      }
 
-.sidebarContent {
-  background-color: #fff;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+      .sidebar {
+        display: none;
+      }
+    }
 
-.IMC p {
-  font-weight: bold;
-}
+    @media(max-width: 400px) {
+      .categoryCard {
+        flex: 0 0 100%;
+      }
+    }
 
-label {
-  display: block;
-  margin: 10px 0 5px;
-}
+    .footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #333;
+      color: #fff;
+    }
 
-@media(max-width: 650px) {
-  .box-content {
-    width: 400px;
-  }
+    .footerAnchor {
+      color: #fff;
+      text-decoration: none;
+    }
 
-  form {
-    width: 300px;
-  }
+    .footerAnchor:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 
-  input {
-    width: 200px;
-  }
-}
-
-@media(max-width: 400px) {
-  .box-content {
-    width: 400px;
-  }
-
-  form {
-    width: 220px;
-  }
-}
-
-.footer {
-  text-align: center;
-  padding: 15px 0;
-  background-color: #333;
-  color: #fff;
-}
-
-.footerAnchor {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footerAnchor:hover {
-  text-decoration: underline;
-}
+<body>
+  <div class="container">
+    <header class="header">
+      <a class='logo' href='/'>InfoSports</a>
+      <div class="headerBtnGroup">
+        <button class="navBtn"><a href='/login'>Login</a></button>
+        <button class="navBtn"><a href='/registro'>Registro</a></button>
+        <button class="navBtn"><a href='/contato'>Contato</a></button>
+      </div>
+      <div class="hamburguer-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </header>
+    <p class="sectionTitle" id="backToTop">BEM VINDO A INFOSPORTS!</p>
+    <p class="sectionDescription">Aqui é onde você encontra todos os itens mais novos e modernos do seu esporte preferido.</p>
+    <section class="gridContainer">
+      <div class="mainContent">
+        <a class="pag-link" href="boxe.html">
+          <div class="categoryCard">
+            <img src="https://imagens.ebc.com.br/NYcD4y=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/bia_ferreira_mundial_dia_1.jpg?itok=EyIc3F5A" alt="Boxe">
+            <p class="mainCategoryCardTitle">BOXE</p>
+            <p class="mainCategoryCardDescription">Descubra a força interior e a técnica impecável necessárias para se destacar no ringue.</p>
+          </div>
+        </a>
+        <a class="pag-link" href="basquete.html">
+          <div class="categoryCard">
+            <img src="https://s1.static.brasilescola.uhol.com.br/be/2022/08/basquete.jpg" alt="Basquete">
+            <p class="mainCategoryCardTitle">BASQUETE</p>
+            <p class="mainCategoryCardDescription">O basquetebol é um esporte coletivo praticado entre duas equipes.</p>
+          </div>
+        </a>
+        <a class="pag-link" href="corrida.html">
+          <div class="categoryCard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1K-FfsVALgAXGtG7zQTmFsCocR_g6PKZRQ&s" alt="Corrida">
+            <p class="mainCategoryCardTitle">CORRIDA</p>
+            <p class="mainCategoryCardDescription">A corrida é uma prática corporal que envolve os músculos dos membros inferiores.</p>
+          </div>
+        </a>
+        <a class="pag-link" href="beisebol.html">
+          <div class="categoryCard">
+            <img src="https://static.todamahteria.com.br/upload/be/is/beisebol-og.jpg" alt="Beisebol">
+            <p class="mainCategoryCardTitle">BEISEBOL</p>
+            <p class="mainCategoryCardDescription">O beisebol é um esporte praticado por duas equipes de nove jogadores.</p>
+          </div>
+        </a>
+        <a class="pag-link" href="futebolamericano.html">
+          <div class="categoryCard">
+            <img src="https://images.vexels.com/mehdia/users/3/229528/isolated/preview/43929ffbdf2c80fcbe27eb145922e394-ilustracao-do-lado-da-bola-de-futebol-americano.png" alt="Futebol Americano">
+            <p class="mainCategoryCardTitle">FUTEBOL AMERICANO</p>
+            <p class="mainCategoryCardDescription">O objetivo é levar a bola até o campo adversário, marcando um touchdown.</p>
+          </div>
+        </a>
+        <a class="pag-link" href="volei.html">
+          <div class="categoryCard">
+            <img src="https://via.placeholder.com/150" alt="Vôlei">
+            <p class="mainCategoryCardTitle">VÔLEI</p>
+            <p class="mainCategoryCardDescription">O vôlei é um esporte coletivo que envolve duas equipes.</p>
+          </div>
+        </a>
+      </div>
+      <aside class="sidebar">
+        <div class="sidebarContent">
+          <div class="IMC">
+            <p>INDICE DE MASSA CORPORAL (IMC)</p>
+            <label for="#peso">Peso (KG)</label>
+            <input id="peso" type="text" placeholder="Digite o peso...">
+            <label
